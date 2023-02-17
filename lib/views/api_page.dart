@@ -25,11 +25,6 @@ class _ApiPageState extends State<ApiPage> {
   getData() async {
     posts = (await RemoteService().getPosts());
     isLoaded = true;
-    // if (posts != null) {
-    //   setState(() {
-    //     isLoaded = true;
-    //   });
-    // }
   }
 
   @override
