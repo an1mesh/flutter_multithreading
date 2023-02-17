@@ -14,7 +14,7 @@ class ApiPage extends StatefulWidget {
 class _ApiPageState extends State<ApiPage> {
   List<Article>? posts;
 
-  var isLoaded = false;
+  bool isLoaded = false;
 
   @override
   void initState() {
@@ -82,40 +82,7 @@ class _ApiPageState extends State<ApiPage> {
           }
         },
       ),
-      // body: Visibility(
-      //   visible: isLoaded,
-      //   // ignore: sort_child_properties_last
-      //   child: ListView.builder(
-      //     itemCount: posts?.length,
-      //     itemBuilder: (context, index) {
-      //       return Column(
-      //         children: [
-      //           Visibility(
-      //             visible: isLoaded,
-      //             replacement: const CircularProgressIndicator(),
-      //             child: InkWell(
-      //               onTap: null,
-      //               child: AnimatedContainer(
-      //                 duration: Duration(milliseconds: 200),
-      //                 child: Card(
-      //                   child: Image.network(posts![index].urlToImage!),
-      //                 ),
-      //               ),
-      //             ),
-      //           ),
-      //           ListTile(
-      //             title: Text(posts![index].title),
-      //             subtitle: Text(posts![index].content),
-      //           ),
-      //         ],
-      //       );
-      //     },
-      //   ),
-
-      //   replacement: const Center(
-      //     child: CircularProgressIndicator(),
-      //   ),
-      // ),
+     
     );
   }
 }
